@@ -1,6 +1,27 @@
 ## This is the SQL Code I used to clean and prepare the data about charcter lines in the TV show "The Office." ##
 
-## First I began by ensuring all character names were spelt correctly so I would have accurate data. I sorted through
+## First I wanted to Delete all rows of data I wouldn't need for my study. I used the following code to keep the characters
+    I was focused on for this project. ##
+    
+DELETE FROM `uplifted-light-375802.The_office.Lines`
+WHERE Character != "Pam"
+  AND Character !="Michael"
+  AND Character != "Jim"
+  AND Character != "Dwight"
+  AND Character != "Phyllis"
+  AND Character != "Stanley"
+  AND Character != "Angela"
+  AND Character != "Oscar"
+  AND Character != "Kevin"
+  AND Character != "Meredith"
+  AND Character != "Creed"
+  AND Character != "Ryan"
+  AND Character != "Jan"
+  AND Character != "Toby"
+  AND Character != "Holy"
+
+
+## Then I ensured all character names were spelt correctly so I would have accurate data. I sorted through
     all the main characters in each season to correct any mispelling using the following SQL Queries. ##
     
 
@@ -54,3 +75,74 @@ order by Character
   The next lines of code are what I used to update the incorrect data with the right names for the cast. ##
 
 
+UPDATE `uplifted-light-375802.The_office.Lines` 
+SET Character="Angela"
+WHERE Character="Angels"
+
+UPDATE `uplifted-light-375802.The_office.Lines` 
+SET Character="Angela"
+WHERE Character="Anglea"
+
+UPDATE `uplifted-light-375802.The_office.Lines` 
+SET Character="Angela"
+WHERE Character="Angel"
+
+UPDATE `uplifted-light-375802.The_office.Lines` 
+SET Character="Michael"
+WHERE Character="Micael"
+
+UPDATE `uplifted-light-375802.The_office.Lines` 
+SET Character="Michael"
+WHERE Character="micael"
+
+UPDATE `uplifted-light-375802.The_office.Lines` 
+SET Character="Michael"
+WHERE Character="Micahel"
+
+UPDATE `uplifted-light-375802.The_office.Lines` 
+SET Character="Michael"
+WHERE Character="micahel"
+
+UPDATE `uplifted-light-375802.The_office.Lines` 
+SET Character="Michael"
+WHERE Character="Michae"
+
+UPDATE `uplifted-light-375802.The_office.Lines` 
+SET Character="Michael"
+WHERE Character="Michal"
+
+UPDATE `uplifted-light-375802.The_office.Lines` 
+SET Character="Michael"
+WHERE Character="Micheal"
+
+UPDATE `uplifted-light-375802.The_office.Lines` 
+SET Character="Michael"
+WHERE Character="Mihael"
+
+UPDATE `uplifted-light-375802.The_office.Lines` 
+SET Character="Darryl"
+WHERE Character="Daryl"
+
+UPDATE `uplifted-light-375802.The_office.Lines` 
+SET Character="Darryl"
+WHERE Character="Darrly"
+
+UPDATE `uplifted-light-375802.The_office.Lines` 
+SET Character="Dwight"
+WHERE Character="Dight"
+
+UPDATE `uplifted-light-375802.The_office.Lines` 
+SET Character="Meredith"
+WHERE Character="Meridith"
+
+UPDATE `uplifted-light-375802.The_office.Lines` 
+SET Character="Phyllis"
+WHERE Character="Phyliss"
+
+## Next I renamed a column name that had no context to one that made sense for the table ##
+
+ALTER TABLE `uplifted-light-375802.The_office.Lines`
+RENAME COLUMN int64_field_0 to Order_of_Lines;
+
+## This concludes my SQL code. Now I have verified all character names are correct and we only have data on the 
+    Characters included in my study. ##
