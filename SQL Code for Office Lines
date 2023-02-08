@@ -1,0 +1,56 @@
+## This is the SQL Code I used to clean and prepare the data about charcter lines in the TV show "The Office." ##
+
+## First I began by ensuring all character names were spelt correctly so I would have accurate data. I sorted through
+    all the main characters in each season to correct any mispelling using the following SQL Queries. ##
+    
+
+SELECT DISTINCT(Character)
+FROM `uplifted-light-375802.The_office.Lines`
+Where season = 1
+order by Character
+
+SELECT DISTINCT(Character)
+FROM `uplifted-light-375802.The_office.Lines`
+Where season = 2
+order by Character
+
+SELECT DISTINCT(Character)
+FROM `uplifted-light-375802.The_office.Lines`
+Where season = 3
+order by Character
+
+SELECT DISTINCT(Character)
+FROM `uplifted-light-375802.The_office.Lines`
+Where season = 4
+order by Character
+
+SELECT DISTINCT(Character)
+FROM `uplifted-light-375802.The_office.Lines`
+Where season = 5
+order by Character
+
+SELECT DISTINCT(Character)
+FROM `uplifted-light-375802.The_office.Lines`
+Where season = 6
+order by Character
+
+SELECT DISTINCT(Character)
+FROM `uplifted-light-375802.The_office.Lines`
+Where season = 7
+order by Character
+
+SELECT DISTINCT(Character)
+FROM `uplifted-light-375802.The_office.Lines`
+Where season = 8
+order by Character
+
+SELECT DISTINCT(Character)
+FROM `uplifted-light-375802.The_office.Lines`
+Where season = 9
+order by Character
+
+
+## I sorted through every main character's name as listed in the table and wrote down any typos or mispelled names I could find.
+  The next lines of code are what I used to update the incorrect data with the right names for the cast. ##
+
+
