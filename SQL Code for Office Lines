@@ -18,7 +18,7 @@ WHERE Character != "Pam"
   AND Character != "Ryan"
   AND Character != "Jan"
   AND Character != "Toby"
-  AND Character != "Holy"
+  AND Character != "Holly"
 
 
 ## Then I ensured all character names were spelt correctly so I would have accurate data. I sorted through
